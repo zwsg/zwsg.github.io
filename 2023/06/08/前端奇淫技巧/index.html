@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="false" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/zwsg.github.io/js/color.global.min.js" ></script>
+<script src="/zwsg.github.io/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>前端奇淫技巧 | zwsg</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/zwsg.github.io/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/zwsg.github.io/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="一、利用css画箭头  方法一  123456789&lt;div class&#x3D;&quot;arrow&quot;&gt;&lt;&#x2F;div&gt;&lt;style&gt;  .arrow &#123;    width: 0;    height: 0;    border: 60px solid;    border-color: blue red yellow green;&#x2F;&#x2F;需要哪个方向的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端奇淫技巧">
+<meta property="og:url" content="https://zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/index.html">
+<meta property="og:site_name" content="zwsg">
+<meta property="og:description" content="一、利用css画箭头  方法一  123456789&lt;div class&#x3D;&quot;arrow&quot;&gt;&lt;&#x2F;div&gt;&lt;style&gt;  .arrow &#123;    width: 0;    height: 0;    border: 60px solid;    border-color: blue red yellow green;&#x2F;&#x2F;需要哪个方向的">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/2020082217495567.png">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/20200823224547248.png">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/20200823230002368.png">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/20200822231151548.png">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/2020082223241119.png">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/filter%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84%E7%A9%BA%E5%80%BC.png">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/&amp;1%E5%88%A4%E6%96%AD%E6%95%B0%E5%AD%97%E6%98%AF%E5%90%A6%E4%B8%BA%E5%A5%87%E6%95%B0.png">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/console.time%E5%92%8Cconsole.timeEnd%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8%E8%8E%B7%E5%8F%96%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%97%B6%E9%97%B4.png">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/__%E5%90%91%E4%B8%8B%E5%8F%96%E6%95%B4.png">
+<meta property="og:image" content="https://zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7//%2Bnew%20Date%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4%E6%88%B3.png">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E6%B7%B1%E6%8B%B7%E8%B4%9D.png">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/vue%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81.png">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/$$(">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/%E5%8A%AB%E6%8C%81%E5%88%AB%E4%BA%BA%E7%9A%84%E6%96%B9%E6%B3%95.png">
+<meta property="article:published_time" content="2023-06-08T05:52:23.000Z">
+<meta property="article:modified_time" content="2024-04-28T09:03:56.953Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/2020082217495567.png">
+  
+    <link rel="alternate" href="/zwsg.github.io/atom.xml" title="zwsg" type="application/atom+xml">
+  
+  
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/zwsg.github.io/images/favicon-light-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/zwsg.github.io/images/favicon-light-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/zwsg.github.io/images/favicon-light-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/zwsg.github.io/images/favicon-light-192.png" sizes="192x192">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/zwsg.github.io/images/favicon-dark-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/zwsg.github.io/images/favicon-dark-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/zwsg.github.io/images/favicon-dark-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/zwsg.github.io/images/favicon-dark-192.png" sizes="192x192">
+  
+  
+  
+<link rel="stylesheet" href="/zwsg.github.io/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/zwsg.github.io/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>zwsg </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/zwsg.github.io/">主页</a>
+    
+      <a class="main-nav-link" href="/zwsg.github.io/archives">归档</a>
+    
+      <a class="main-nav-link" href="/zwsg.github.io/about">个人简历</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    <!-- 
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/zwsg.github.io/atom.xml" title="RSS 订阅">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+     -->
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/zwsg.github.io/">主页</a>
+    
+      <a class="nav-dropdown-link" href="/zwsg.github.io/archives">归档</a>
+    
+      <a class="nav-dropdown-link" href="/zwsg.github.io/about">个人简历</a>
+    
+    
+      <a class="nav-dropdown-link" href="/zwsg.github.io/atom.xml" title="RSS 订阅">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/zwsg.github.io/images/avatar.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">zwsg </div>
+      <div class="dot"></div>
+      <div class="subtitle">曾获美国《时代周刊》2006年度风云人物！08年感动中国特别大奖！ </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://twitter.com" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://store.steampowered.com" title="Steam"><i class="fa-brands fa-steam"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <div class="category-box">
+            <a class="category-link" href="/zwsg.github.io/categories/%E5%85%B6%E4%BB%96/">
+                其他
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/zwsg.github.io/categories/%E5%89%8D%E7%AB%AF/">
+                前端
+                <div class="category-count">1</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">归档</h3>
+      
+      
+        <a class="archive-link" href="/zwsg.github.io/archives/2023/06 ">
+          六月 2023 
+          <div class="archive-count">2 </div>
+        </a>
+      
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">最新文章</h3>
+      <ul>
+        
+          <a class="recent-link" href="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/" title="前端奇淫技巧" >
+            <div class="recent-link-text">
+              前端奇淫技巧
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/zwsg.github.io/2023/06/06/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="markdown基本语法" >
+            <div class="recent-link-text">
+              markdown基本语法
+            </div>
+          </a>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="post-前端奇淫技巧" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        前端奇淫技巧
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2023-06-08T05:52:23.000Z" itemprop="datePublished">2023-06-08</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/zwsg.github.io/categories/%E5%89%8D%E7%AB%AF/">前端</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            8.5k 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h4 id="一、利用css画箭头">一、利用css画箭头</h4>
+<ol>
+<li>方法一</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;arrow&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.arrow</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border</span>: <span class="number">60px</span> solid;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-color</span>: blue red yellow green;//需要哪个方向的箭头，只需将其他方向边框颜色设为transparent透明即可</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/2020082217495567.png" alt></p>
+<ol start="2">
+<li>方法二</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;arrow&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.arrow</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">60px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">60px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-color</span>: blue;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-style</span>: solid;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">position</span>: absolute;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-width</span>: <span class="number">8px</span> <span class="number">8px</span> <span class="number">0</span> <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">45deg</span>);</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/20200823224547248.png" alt></p>
+<p>如图，这种方法因为旋转会导致箭头部分被遮挡，显示不完全，需添加相应的<code>marigin</code>去配合实现。此处添加<code>margin-top</code>,修改后代码如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;arrow&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.arrow</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">60px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">60px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-color</span>: blue;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-style</span>: solid;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">position</span>: absolute;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-width</span>: <span class="number">8px</span> <span class="number">8px</span> <span class="number">0</span> <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(<span class="number">45deg</span>);</span></span><br><span class="line"><span class="language-css">    <span class="attribute">margin-top</span>: <span class="number">10px</span>;//添加<span class="attribute">margin-top</span>,解决箭头上部被遮挡问题</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/20200823230002368.png" alt></p>
+<ol start="3">
+<li>方法三<br>
+利用伪类:after和:before绘制两个相同大小、相同方向的三角形，一个设置为箭头颜色的背景，另一个与底色相同的颜色，两个相重叠，但要有一定距离的便宜，作为箭头的大小。</li>
+</ol>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;arrow&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.arrow</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">width</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">height</span>: <span class="number">0</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">position</span>: relative;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border</span>: <span class="number">60px</span> solid;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-color</span>: blue transparent transparent transparent;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css">  <span class="selector-class">.arrow</span><span class="selector-pseudo">::after</span> &#123;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">content</span>: <span class="string">&quot;&quot;</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">position</span>: absolute;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">top</span>: -<span class="number">68px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">left</span>: -<span class="number">60px</span>;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border</span>: <span class="number">60px</span> solid;</span></span><br><span class="line"><span class="language-css">    <span class="attribute">border-color</span>: black transparent transparent transparent;</span></span><br><span class="line"><span class="language-css">  &#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/20200822231151548.png" alt></p>
+<p>此时只需要修改<code>black</code>为所处父元素背景色即可，此处修改为白色，如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;arrow&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span></span><br><span class="line">  .arrow &#123;</span><br><span class="line">    width: 0;</span><br><span class="line">    height: 0;</span><br><span class="line">    position: relative;</span><br><span class="line">    border: 60px solid;</span><br><span class="line">    border-color: blue transparent transparent transparent;</span><br><span class="line">  &#125;</span><br><span class="line">  .arrow::after &#123;</span><br><span class="line">    content: &quot;&quot;;</span><br><span class="line">    position: absolute;</span><br><span class="line">    top: -68px;</span><br><span class="line">    left: -60px;</span><br><span class="line">    border: 60px solid;</span><br><span class="line">    border-color: white transparent transparent transparent; //black=&gt;white</span><br><span class="line">  &#125;</span><br><span class="line"><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/2020082223241119.png" alt></p>
+<h4 id="二、利用-filter-Boolean-过滤数组中-false，null，0，“”，undefined，NaN">二、利用 .filter(Boolean) 过滤数组中 false，null，0，“”，undefined，NaN</h4>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/filter%E8%BF%87%E6%BB%A4%E6%95%B0%E7%BB%84%E7%A9%BA%E5%80%BC.png" alt></p>
+<h4 id="三、利用-1-判断数字是否为奇数">三、利用 &amp;1 判断数字是否为奇数</h4>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/&amp;1%E5%88%A4%E6%96%AD%E6%95%B0%E5%AD%97%E6%98%AF%E5%90%A6%E4%B8%BA%E5%A5%87%E6%95%B0.png" alt></p>
+<h4 id="四、console-time-和-console-timeEnd-组合使用获取程序执行耗时">四、console.time 和 console.timeEnd 组合使用获取程序执行耗时</h4>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/console.time%E5%92%8Cconsole.timeEnd%E7%BB%84%E5%90%88%E4%BD%BF%E7%94%A8%E8%8E%B7%E5%8F%96%E7%A8%8B%E5%BA%8F%E6%89%A7%E8%A1%8C%E6%97%B6%E9%97%B4.png" alt></p>
+<h4 id="五、利用-双波浪符向下取整">五、利用 ~~ 双波浪符向下取整</h4>
+<p>向下取整有很多方法， <code>Math.floor</code>、<code>parseInt</code>都可以，不过两个<code>~~</code>运算符来取整是最方便的，而且逻辑运算很快。</p>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/__%E5%90%91%E4%B8%8B%E5%8F%96%E6%95%B4.png" alt></p>
+<h4 id="六、利用-符号获取当前时间戳">六、利用 + 符号获取当前时间戳</h4>
+<p>除了<code>Date.now()</code>外，还可以通过<code>+new Date()</code>来获取当前时间戳：</p>
+<p><img src="%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7//%2Bnew%20Date%E8%8E%B7%E5%8F%96%E5%BD%93%E5%89%8D%E6%97%B6%E9%97%B4%E6%88%B3.png" alt></p>
+<h4 id="七、整个网页置灰">七、整个网页置灰</h4>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">html</span> &#123;</span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">  -webkit-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">  -moz-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">  -ms-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">  -o-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">100%</span>);</span><br><span class="line">  <span class="comment">/* 兼容 Firefox */</span></span><br><span class="line">  <span class="attribute">filter</span>: <span class="built_in">url</span>(<span class="string">&quot;data:image/svg+xml;utf8,&lt;svg xmlns=&#x27;http://www.w3.org/2000/svg&#x27;&gt;&lt;filter id=&#x27;grayscale&#x27;&gt;&lt;feColorMatrix type=&#x27;matrix&#x27; values=&#x27;0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0&#x27;/&gt;&lt;/filter&gt;&lt;/svg&gt;#grayscale&quot;</span>);</span><br><span class="line">  <span class="comment">/* 兼容 IE */</span></span><br><span class="line">  <span class="attribute">filter</span>: progid:DXImageTransform.Microsoft.<span class="built_in">BasicImage</span>(grayscale=<span class="number">1</span>);</span><br><span class="line">  <span class="comment">/*兼容 Chrome Safari Edge 等 */</span></span><br><span class="line">  -webkit-<span class="attribute">filter</span>: <span class="built_in">grayscale</span>(<span class="number">1</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="八、补0操作">八、补0操作</h4>
+<p>场景：页面月和日的显示，需要用0或者其他字符占位，例如：03/04。<br>
+通常情况下可以通过判断数字是否小于10，小于则在前面拼接一个0。<br>
+这里换一个逻辑：无论值为啥，都在前面补一个0，然后取后两位，具体代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//方式1 对数字操作</span></span><br><span class="line"><span class="keyword">let</span> num = <span class="number">11</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>((<span class="string">&#x27;0&#x27;</span> + num).<span class="title function_">slice</span>(-<span class="number">2</span>))<span class="comment">// 11</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> num1 = <span class="number">9</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>((<span class="string">&#x27;0&#x27;</span> + num1).<span class="title function_">slice</span>(-<span class="number">2</span>))<span class="comment">// 09</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//方式2 对字符串操作</span></span><br><span class="line"><span class="keyword">let</span> day = <span class="string">&quot;11&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(day.<span class="title function_">padStart</span>(<span class="number">2</span>, <span class="string">&quot;0&quot;</span>))<span class="comment">// &#x27;11&#x27;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> day1 = <span class="string">&quot;9&quot;</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(day1.<span class="title function_">padStart</span>(<span class="number">2</span>, <span class="string">&quot;0&quot;</span>))<span class="comment">// &#x27;09&#x27;</span></span><br></pre></td></tr></table></figure>
+<p>是不是逻辑更简单，代码也更简洁？</p>
+<h4 id="九、一行代码获取过去-未来-n-天的日期">九、一行代码获取过去/未来 n 天的日期</h4>
+<p>这里以7天为例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 过去七天</span></span><br><span class="line">[...<span class="title class_">Array</span>(<span class="number">7</span>)].<span class="title function_">map</span>(<span class="function">(<span class="params">v, k</span>) =&gt;</span> <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="title class_">Date</span>.<span class="title function_">now</span>() - <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span> * <span class="number">1000</span> * k).<span class="title function_">toLocaleDateString</span>());</span><br><span class="line"></span><br><span class="line"><span class="comment">// 未来七天</span></span><br><span class="line">[...<span class="title class_">Array</span>(<span class="number">7</span>)].<span class="title function_">map</span>(<span class="function">(<span class="params">v, k</span>) =&gt;</span> <span class="keyword">new</span> <span class="title class_">Date</span>(<span class="title class_">Date</span>.<span class="title function_">now</span>() + <span class="number">60</span> * <span class="number">60</span> * <span class="number">24</span> * <span class="number">1000</span> * k).<span class="title function_">toLocaleDateString</span>());</span><br></pre></td></tr></table></figure>
+<h4 id="十、利用下划线-提高数字可读性">十、利用下划线 _ 提高数字可读性</h4>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">const largeNumber = 1_000_000_000;</span><br><span class="line">console.log(largeNumber); // 1000000000</span><br></pre></td></tr></table></figure>
+<h4 id="十一、金钱格式化">十一、金钱格式化</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">formatCash = <span class="function"><span class="params">str</span> =&gt;</span> str.<span class="title function_">split</span>(<span class="string">&#x27;&#x27;</span>).<span class="title function_">reverse</span>().<span class="title function_">reduce</span>(<span class="function">(<span class="params">prev, next, index</span>) =&gt;</span> ((index % <span class="number">3</span>) ? next : (next + <span class="string">&#x27;,&#x27;</span>)) + prev)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">formatCash</span>(<span class="string">&#x27;1234567890&#x27;</span>)) <span class="comment">// 1,234,567,890</span></span><br></pre></td></tr></table></figure>
+<h4 id="十二、一行代码实现深拷贝">十二、一行代码实现深拷贝</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> a = &#123;</span><br><span class="line">    <span class="attr">a</span>: <span class="number">1</span>,</span><br><span class="line">    <span class="attr">b</span>: &#123; <span class="attr">c</span>: <span class="number">1</span>, <span class="attr">d</span>: <span class="number">2</span> &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">let</span> b = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(a))</span><br></pre></td></tr></table></figure>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/%E4%B8%80%E8%A1%8C%E4%BB%A3%E7%A0%81%E5%AE%9E%E7%8E%B0%E6%B7%B1%E6%8B%B7%E8%B4%9D.png" alt></p>
+<h4 id="十三、Vue循环表单验证">十三、Vue循环表单验证</h4>
+<p>通常情况下，Vue表单验证只需要在对应验证项上添加<code>prop</code>属性，然后在<code>rules</code>配置校验规则即可：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**** template */</span></span><br><span class="line">&lt;el-form :model=<span class="string">&quot;form&quot;</span> :rules=<span class="string">&quot;rules&quot;</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">el-row</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">el-col</span> <span class="attr">:span</span>=<span class="string">&quot;12&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">el-form-item</span> <span class="attr">label</span>=<span class="string">&quot;姓名&quot;</span> <span class="attr">prop</span>=<span class="string">&quot;name&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">v-model.trim</span>=<span class="string">&quot;form.name&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请填写姓名&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">el-col</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">el-col</span> <span class="attr">:span</span>=<span class="string">&quot;12&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">el-form-item</span> <span class="attr">label</span>=<span class="string">&quot;年龄&quot;</span> <span class="attr">prop</span>=<span class="string">&quot;age&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">v-model.trim</span>=<span class="string">&quot;form.name&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请填写年龄&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">el-col</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">el-row</span>&gt;</span></span></span><br><span class="line">&lt;/el-form&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**** script */</span></span><br><span class="line"><span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">//表单校验规则</span></span><br><span class="line">    <span class="attr">rules</span>: &#123;</span><br><span class="line">      <span class="attr">name</span>: [</span><br><span class="line">        &#123;<span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;姓名不能为空&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span>&#125;</span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">age</span>: [</span><br><span class="line">        &#123;<span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;年龄不能为空&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span>&#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>但实际开发过程中，我们可能会遇到这样的需求，如下：</p>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/vue%E8%A1%A8%E5%8D%95%E9%AA%8C%E8%AF%81.png" alt></p>
+<p>同一个表单中可能存在很多个相同的<code>name</code>和<code>age</code>,该如何去校验呢，总不能<code>name1,name2……</code>，<code>age1,age2……</code>这样的写下去吧-_-||<br>
+废话不多说，直接上代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**** template */</span></span><br><span class="line">&lt;el-form :model=<span class="string">&quot;form&quot;</span> :rules=<span class="string">&quot;rules&quot;</span>&gt;</span><br><span class="line">  <span class="language-xml"><span class="tag">&lt;<span class="name">el-row</span> <span class="attr">v-for</span>=<span class="string">&quot;(people, index) in peopleList&quot;</span>&gt;</span>//循环创建人员信息表单</span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">el-col</span> <span class="attr">:span</span>=<span class="string">&quot;12&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      /**** 注意这里的prop写法 */</span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">el-form-item</span> <span class="attr">label</span>=<span class="string">&quot;姓名&quot;</span> <span class="attr">:prop</span>=<span class="string">&quot;&#x27;peopleList.&#x27; + index + &#x27;.name&#x27;&quot;</span> <span class="attr">:rules</span>=<span class="string">&quot;rules.name&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">v-model.trim</span>=<span class="string">&quot;form.name&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请填写姓名&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">el-col</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;<span class="name">el-col</span> <span class="attr">:span</span>=<span class="string">&quot;12&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;<span class="name">el-form-item</span> <span class="attr">label</span>=<span class="string">&quot;年龄&quot;</span> <span class="attr">:prop</span>=<span class="string">&quot;&#x27;peopleList.&#x27; + index + &#x27;.age&#x27;&quot;</span> <span class="attr">:rules</span>=<span class="string">&quot;rules.age&quot;</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">        <span class="tag">&lt;<span class="name">el-input</span> <span class="attr">v-model.trim</span>=<span class="string">&quot;form.name&quot;</span> <span class="attr">placeholder</span>=<span class="string">&quot;请填写年龄&quot;</span>/&gt;</span></span></span><br><span class="line"><span class="language-xml">      <span class="tag">&lt;/<span class="name">el-form-item</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">    <span class="tag">&lt;/<span class="name">el-col</span>&gt;</span></span></span><br><span class="line"><span class="language-xml">  <span class="tag">&lt;/<span class="name">el-row</span>&gt;</span></span></span><br><span class="line">&lt;/el-form&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**** script */</span></span><br><span class="line"><span class="title function_">data</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="keyword">return</span> &#123;</span><br><span class="line">    <span class="comment">//需填写的人员信息 假设有三个人员信息需填写</span></span><br><span class="line">    <span class="attr">peopleList</span>: [</span><br><span class="line">      &#123;<span class="attr">name</span>: <span class="string">&quot;&quot;</span>, <span class="attr">age</span>: <span class="string">&quot;&quot;</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">name</span>: <span class="string">&quot;&quot;</span>, <span class="attr">age</span>: <span class="string">&quot;&quot;</span>&#125;,</span><br><span class="line">      &#123;<span class="attr">name</span>: <span class="string">&quot;&quot;</span>, <span class="attr">age</span>: <span class="string">&quot;&quot;</span>&#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//表单校验规则</span></span><br><span class="line">    <span class="attr">rules</span>: &#123;</span><br><span class="line">      <span class="attr">name</span>: [</span><br><span class="line">        &#123;<span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;姓名不能为空&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span>&#125;</span><br><span class="line">      ],</span><br><span class="line">      <span class="attr">age</span>: [</span><br><span class="line">        &#123;<span class="attr">required</span>: <span class="literal">true</span>, <span class="attr">message</span>: <span class="string">&quot;年龄不能为空&quot;</span>, <span class="attr">trigger</span>: <span class="string">&quot;blur&quot;</span>&#125;</span><br><span class="line">      ]</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样代码就会自己根据表单数去循环校验了，校验规则只有一套！</p>
+<h4 id="十四、利用documentFragment文档碎片提高性能">十四、利用<code>documentFragment</code>文档碎片提高性能</h4>
+<p>日常开发中，经常需要动态去拼接渲染一些元素，如果需拼接的元素过多，就会大大损耗浏览器性能，这里即可利用<code>文档碎片</code>来提升性能。</p>
+<ul>
+<li>
+<p>Q：<code>文档碎片</code>是什么？<br>
+A：是一个容器，用于暂时存放创建的dom元素。</p>
+</li>
+<li>
+<p>Q：如何使用？<br>
+A：使用<code>document.createDocumentFragment()</code>创建，再通过<code>document.body.appendChild(documentFragment)</code>添加到页面中。</p>
+</li>
+</ul>
+<p>代码如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> myFragment = <span class="variable language_">document</span>.<span class="title function_">createDocumentFragment</span>();</span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">let</span> i=<span class="number">0</span>;i&lt;<span class="number">10000</span>;i++)</span><br><span class="line">&#123; </span><br><span class="line">    <span class="keyword">let</span> span = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;span&quot;</span>); </span><br><span class="line">    <span class="keyword">let</span> spanText = <span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(i); </span><br><span class="line">    span.<span class="title function_">appendChild</span>(spanText);</span><br><span class="line">    <span class="comment">//先附加在文档碎片中</span></span><br><span class="line">    myFragment.<span class="title function_">appendChild</span>(span);  </span><br><span class="line">&#125; </span><br><span class="line"><span class="comment">//最后一次性添加到document中</span></span><br><span class="line"><span class="variable language_">document</span>.<span class="property">body</span>.<span class="title function_">appendChild</span>(myFragment); </span><br></pre></td></tr></table></figure>
+<h4 id="十五、利用try-catch让forEach跳出循环">十五、利用<code>try catch</code>让<code>forEach</code>跳出循环</h4>
+<p>因为<code>forEach</code>的回调函数形成了一个作用域，在里面使用<code>return</code>并不会跳出整个循环，而只会跳出当前循环（达到了<code>continue</code>的效果）。<br>
+因此可以另辟蹊径，通过<code>try catch</code>抛出异常的方式来跳出循环：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span> &#123;</span><br><span class="line">  [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>].<span class="title function_">forEach</span>(<span class="keyword">function</span> (<span class="params">item, idx</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;item&#x27;</span>,item)</span><br><span class="line">    <span class="keyword">if</span>(item === <span class="number">3</span>) &#123;</span><br><span class="line">      <span class="keyword">throw</span> <span class="title class_">Error</span>();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;<span class="keyword">catch</span>(e) &#123;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>![](前端奇淫技巧/try catch跳出forEach循环.png)</p>
+<h4 id="十六、利用-获取所有匹配的dom元素">十六、利用<code>$$('...')</code>获取所有匹配的dom元素</h4>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/$$('...')%E8%8E%B7%E5%8F%96%E6%89%80%E6%9C%89%E5%8C%B9%E9%85%8D%E5%85%83%E7%B4%A0.png" alt></p>
+<h4 id="十七、“劫持”别人的方法">十七、“劫持”别人的方法</h4>
+<p>不改变别人代码的情况下，偷偷干点啥，是不是很刺激？O(∩_∩)O哈哈~<br>
+直接上代码：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">A</span>(<span class="params"></span>) &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我是别人写的函数A，我被调用了！&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">*计划要劫持的函数名</span>&#125; method </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">*回调函数</span>&#125; fun </span></span><br><span class="line"><span class="comment"> * <span class="doctag">@param</span> &#123;<span class="type">*要劫持的函数所在的对象，默认为window</span>&#125; context </span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">surprise</span> = (<span class="params">method, fun, context = <span class="variable language_">window</span></span>) =&gt; &#123;</span><br><span class="line">  <span class="keyword">let</span> originFunc = context[method];<span class="comment">//保存原函数</span></span><br><span class="line">  context[method] = <span class="title function_">fun</span>(originFunc);<span class="comment">//将重写的函数作为回调函数的返回值赋给原函数变量</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">surprise</span>(<span class="string">&#x27;A&#x27;</span>,<span class="function"><span class="params">originFunc</span> =&gt;</span> <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">//做任何你想函数A执行时候你想做的事情</span></span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;我劫持了函数A，我要偷偷干点坏事！&quot;</span>);</span><br><span class="line">  originFunc.<span class="title function_">call</span>(<span class="variable language_">this</span>);</span><br><span class="line">&#125;)</span><br><span class="line"><span class="title function_">A</span>();</span><br></pre></td></tr></table></figure>
+<p><img src="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/%E5%8A%AB%E6%8C%81%E5%88%AB%E4%BA%BA%E7%9A%84%E6%96%B9%E6%B3%95.png" alt></p>
+<p>当然了，干坏事是开玩笑的，日常开发中，可能某个方法中逻辑比较复杂，在不破坏原代码的前提下，就可以用这种“劫持”的操作来干自己想干的事了！</p>
+<h4 id="十八、“一次性”函数">十八、“一次性”函数</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> <span class="title function_">onceFunc</span> = (<span class="params"></span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;你调用我啦！&#x27;</span>)<span class="comment">//永远只会执行一次</span></span><br><span class="line">  onceFunc = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;好话不说二遍，好方法只调用一次！&#x27;</span>)</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">onceFunc</span>()    <span class="comment">// 你调用我啦！</span></span><br><span class="line"><span class="title function_">onceFunc</span>()    <span class="comment">// 好话不说二遍，好方法只调用一次！</span></span><br><span class="line"><span class="title function_">onceFunc</span>()    <span class="comment">// 好话不说二遍，好方法只调用一次！</span></span><br></pre></td></tr></table></figure>
+<h4 id="十九、函数执行结果缓存">十九、函数执行结果缓存</h4>
+<p>将第一次的执行结果缓存起来，下次再进行<code>相同操作</code>时就直接返回缓存的结果，避免重复调用函数，从而提升代码执行性能。</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> <span class="title function_">memorize</span> = fn =&gt; &#123;</span><br><span class="line">  <span class="keyword">const</span> cache = &#123;&#125;</span><br><span class="line">  <span class="keyword">return</span> <span class="function">(<span class="params">...args</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">const</span> _args = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(args)</span><br><span class="line">    <span class="keyword">return</span> cache[_args] || (cache[_args] = fn.<span class="title function_">apply</span>(fn, args))</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> <span class="title function_">add</span> = (<span class="params">a, b</span>) =&gt; &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;开始缓存&#x27;</span>)</span><br><span class="line">  <span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> adder = <span class="title function_">memorize</span>(add)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">adder</span>(<span class="number">10</span>, <span class="number">8</span>)) <span class="comment">// 输出结果: 开始缓存 18</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">adder</span>(<span class="number">10</span>, <span class="number">8</span>)) <span class="comment">// 输出结果: 18</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="title function_">adder</span>(<span class="number">8</span>, <span class="number">10</span>)) <span class="comment">// 输出结果: 开始缓存 18</span></span><br></pre></td></tr></table></figure>
+<p>这里因为逻辑简单，看不出优化效果，当函数逻辑极为复杂时，可大幅提升性能。</p>
+<h4 id="二十、axios请求前取消上次未完成请求">二十、axios请求前取消上次未完成请求</h4>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">  <span class="comment">/** that为函数调用者，重点就是cancelToken写法 */</span></span><br><span class="line">  <span class="keyword">export</span> <span class="keyword">function</span> <span class="title function_">getData</span>(<span class="params">params, that</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="title function_">request</span>(&#123;</span><br><span class="line">      <span class="attr">url</span>: <span class="string">&#x27;...&#x27;</span>,</span><br><span class="line">      <span class="attr">methods</span>: <span class="string">&#x27;...&#x27;</span>,</span><br><span class="line">      params,</span><br><span class="line">      <span class="attr">cancelToken</span>: <span class="keyword">new</span> <span class="title class_">CancelToken</span>(<span class="function"><span class="params">c</span> =&gt;</span> &#123;</span><br><span class="line">        that.<span class="property">cancel</span> = c</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line"></span><br><span class="line">  <span class="comment">/** 调用 */</span></span><br><span class="line">  <span class="variable language_">this</span>.<span class="property">cancel</span> &amp;&amp; <span class="variable language_">this</span>.<span class="title function_">cancel</span>()</span><br><span class="line">  <span class="title function_">getData</span>(params,<span class="variable language_">this</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left  disabled "
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right "
+    
+      href="/zwsg.github.io/2023/06/06/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/"
+      title="markdown基本语法"
+     >
+
+    <p class="title-text">
+      
+        markdown基本语法
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2025 zwsg                   
+<br>
+    他强由他强，清风拂山冈。他横任他横，明月照大江。
+    <!-- Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a> -->
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/zwsg.github.io/js/light-dark-switch.js"></script>
+</body>
+</html>

@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+
+
+<html theme="dark" showBanner="true" hasBanner="false" > 
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet">
+<link href="https://cdn.staticfile.org/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet">
+<script src="/zwsg.github.io/js/color.global.min.js" ></script>
+<script src="/zwsg.github.io/js/load-settings.js" ></script>
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+
+  
+  <title>markdown基本语法 | zwsg</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" href="/zwsg.github.io/css/fonts/Roboto-Regular.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+  <link rel="preload" href="/zwsg.github.io/css/fonts/Roboto-Bold.ttf" as="font" type="font/ttf" crossorigin="anonymous">
+
+  <meta name="description" content="一、标题 语法：#+空格+标题文字，不同个数#表示不同字号标题，最大为1号标题，最小为6号标题。 123456# 1号标题## 2号标题### 3号标题#### 4号标题##### 5号标题###### 6号标题 效果如下： 1号标题 2号标题 3号标题 4号标题 5号标题 6号标题 二、字体 1、斜体 语法：*+文字+* 或者 _+文字+_。  *我是斜体*&#x3D;&#x3D;&#x3D;&gt;我是斜体 _我是斜体_&#x3D;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="markdown基本语法">
+<meta property="og:url" content="https://zwsg.github.io/2023/06/06/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/index.html">
+<meta property="og:site_name" content="zwsg">
+<meta property="og:description" content="一、标题 语法：#+空格+标题文字，不同个数#表示不同字号标题，最大为1号标题，最小为6号标题。 123456# 1号标题## 2号标题### 3号标题#### 4号标题##### 5号标题###### 6号标题 效果如下： 1号标题 2号标题 3号标题 4号标题 5号标题 6号标题 二、字体 1、斜体 语法：*+文字+* 或者 _+文字+_。  *我是斜体*&#x3D;&#x3D;&#x3D;&gt;我是斜体 _我是斜体_&#x3D;">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/06/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/161045478.png">
+<meta property="article:published_time" content="2023-06-06T08:09:17.000Z">
+<meta property="article:modified_time" content="2024-07-17T09:57:21.551Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://zwsg.github.io/zwsg.github.io/2023/06/06/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/161045478.png">
+  
+    <link rel="alternate" href="/zwsg.github.io/atom.xml" title="zwsg" type="application/atom+xml">
+  
+  
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/zwsg.github.io/images/favicon-light-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/zwsg.github.io/images/favicon-light-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/zwsg.github.io/images/favicon-light-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: light)" href="/zwsg.github.io/images/favicon-light-192.png" sizes="192x192">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/zwsg.github.io/images/favicon-dark-32.png" sizes="32x32">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/zwsg.github.io/images/favicon-dark-128.png" sizes="128x128">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/zwsg.github.io/images/favicon-dark-180.png" sizes="180x180">
+    <link rel="icon" media="(prefers-color-scheme: dark)" href="/zwsg.github.io/images/favicon-dark-192.png" sizes="192x192">
+  
+  
+  
+<link rel="stylesheet" href="/zwsg.github.io/css/style.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+<body>
+  
+   
+  <div id="main-grid" class="  ">
+    <div id="nav" class=""  >
+      <navbar id="navbar">
+  <nav id="title-nav">
+    <a href="/zwsg.github.io/">
+      <div id="vivia-logo">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div>zwsg </div>
+    </a>
+  </nav>
+  <nav id="main-nav">
+    
+      <a class="main-nav-link" href="/zwsg.github.io/">主页</a>
+    
+      <a class="main-nav-link" href="/zwsg.github.io/archives">归档</a>
+    
+      <a class="main-nav-link" href="/zwsg.github.io/about">个人简历</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    <a id="theme-btn" class="nav-icon">
+      <span class="light-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M438.5-829.913v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-829.913Zm0 747.826v-48q0-17.452 11.963-29.476 11.964-12.024 29.326-12.024 17.363 0 29.537 12.024t12.174 29.476v48q0 17.452-11.963 29.476-11.964 12.024-29.326 12.024-17.363 0-29.537-12.024T438.5-82.087ZM877.913-438.5h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537t29.476-12.174h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T877.913-438.5Zm-747.826 0h-48q-17.452 0-29.476-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T82.087-521.5h48q17.452 0 29.476 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T130.087-438.5Zm660.174-290.87-34.239 32q-12.913 12.674-29.565 12.174-16.653-.5-29.327-13.174-12.674-12.673-12.554-28.826.12-16.152 12.794-28.826l33-35q12.913-12.674 30.454-12.674t30.163 12.847q12.709 12.846 12.328 30.826-.38 17.98-13.054 30.653ZM262.63-203.978l-32 34q-12.913 12.674-30.454 12.674t-30.163-12.847q-12.709-12.846-12.328-30.826.38-17.98 13.054-30.653l33.239-31q12.913-12.674 29.565-12.174 16.653.5 29.327 13.174 12.674 12.673 12.554 28.826-.12 16.152-12.794 28.826Zm466.74 33.239-32-33.239q-12.674-12.913-12.174-29.565.5-16.653 13.174-29.327 12.673-12.674 28.826-13.054 16.152-.38 28.826 12.294l35 33q12.674 12.913 12.674 30.454t-12.847 30.163q-12.846 12.709-30.826 12.328-17.98-.38-30.653-13.054ZM203.978-697.37l-34-33q-12.674-12.913-13.174-29.945-.5-17.033 12.174-29.707t31.326-13.293q18.653-.62 31.326 13.054l32 34.239q11.674 12.913 11.174 29.565-.5 16.653-13.174 29.327-12.673 12.674-28.826 12.554-16.152-.12-28.826-12.794ZM480-240q-100 0-170-70t-70-170q0-100 70-170t170-70q100 0 170 70t70 170q0 100-70 170t-170 70Zm-.247-82q65.703 0 111.475-46.272Q637-414.544 637-480.247t-45.525-111.228Q545.95-637 480.247-637t-111.475 45.525Q323-545.95 323-480.247t45.525 111.975Q414.05-322 479.753-322ZM481-481Z"/></svg></span>
+      <span class="dark-mode-icon"><svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M480.239-116.413q-152.63 0-258.228-105.478Q116.413-327.37 116.413-480q0-130.935 77.739-227.435t206.304-125.043q43.022-9.631 63.87 10.869t3.478 62.805q-8.891 22.043-14.315 44.463-5.424 22.42-5.424 46.689 0 91.694 64.326 155.879 64.325 64.186 156.218 64.186 24.369 0 46.978-4.946 22.609-4.945 44.413-14.076 42.826-17.369 62.967 1.142 20.142 18.511 10.511 61.054Q807.174-280 712.63-198.206q-94.543 81.793-232.391 81.793Zm0-95q79.783 0 143.337-40.217 63.554-40.218 95.793-108.283-15.608 4.044-31.097 5.326-15.49 1.283-31.859.805-123.706-4.066-210.777-90.539-87.071-86.473-91.614-212.092-.24-16.369.923-31.978 1.164-15.609 5.446-30.978-67.826 32.478-108.282 96.152Q211.652-559.543 211.652-480q0 111.929 78.329 190.258 78.329 78.329 190.258 78.329ZM466.13-465.891Z"/></svg></span>
+    </a>
+    <!-- 
+      <a id="nav-rss-link" class="nav-icon mobile-hide" href="/zwsg.github.io/atom.xml" title="RSS 订阅">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M198-120q-25.846 0-44.23-18.384-18.384-18.385-18.384-44.23 0-25.846 18.384-44.23 18.384-18.385 44.23-18.385 25.846 0 44.23 18.385 18.384 18.384 18.384 44.23 0 25.845-18.384 44.23Q223.846-120 198-120Zm538.385 0q-18.846 0-32.923-13.769-14.076-13.769-15.922-33.23-8.692-100.616-51.077-188.654-42.385-88.039-109.885-155.539-67.5-67.501-155.539-109.885Q283-663.462 182.385-672.154q-19.461-1.846-33.23-16.23-13.769-14.385-13.769-33.846t14.076-32.922q14.077-13.461 32.923-12.23 120.076 8.692 226.038 58.768 105.961 50.077 185.73 129.846 79.769 79.769 129.846 185.731 50.077 105.961 58.769 226.038 1.231 18.846-12.538 32.922Q756.461-120 736.385-120Zm-252 0q-18.231 0-32.423-13.461t-18.653-33.538Q418.155-264.23 348.886-333.5q-69.27-69.27-166.501-84.423-20.077-4.462-33.538-18.961-13.461-14.5-13.461-33.346 0-19.076 13.884-33.23 13.884-14.153 33.115-10.922 136.769 15.384 234.384 112.999 97.615 97.615 112.999 234.384 3.231 19.23-10.538 33.115Q505.461-120 484.385-120Z"/></svg>
+      </a>
+     -->
+    <div id="nav-menu-btn" class="nav-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20"><path d="M177.37-252.282q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Zm0-186.218q-17.453 0-29.477-11.963-12.024-11.964-12.024-29.326 0-17.363 12.024-29.537T177.37-521.5h605.26q17.453 0 29.477 11.963 12.024 11.964 12.024 29.326 0 17.363-12.024 29.537T782.63-438.5H177.37Zm0-186.217q-17.453 0-29.477-11.964-12.024-11.963-12.024-29.326t12.024-29.537q12.024-12.174 29.477-12.174h605.26q17.453 0 29.477 11.964 12.024 11.963 12.024 29.326t-12.024 29.537q-12.024 12.174-29.477 12.174H177.37Z"/></svg>
+    </div>
+  </nav>
+</navbar>
+<div id="nav-dropdown" class="hidden">
+  <div id="dropdown-link-list">
+    
+      <a class="nav-dropdown-link" href="/zwsg.github.io/">主页</a>
+    
+      <a class="nav-dropdown-link" href="/zwsg.github.io/archives">归档</a>
+    
+      <a class="nav-dropdown-link" href="/zwsg.github.io/about">个人简历</a>
+    
+    
+      <a class="nav-dropdown-link" href="/zwsg.github.io/atom.xml" title="RSS 订阅">RSS</a>
+     
+    </div>
+</div>
+<script>
+  let dropdownBtn = document.getElementById("nav-menu-btn");
+  let dropdownEle = document.getElementById("nav-dropdown");
+  dropdownBtn.onclick = function() {
+    dropdownEle.classList.toggle("hidden");
+  }
+</script>
+    </div>
+    <div id="sidebar-wrapper">
+      <sidebar id="sidebar">
+  
+    <div class="widget-wrap">
+  <div class="info-card">
+    <div class="avatar">
+      
+        <image src=/zwsg.github.io/images/avatar.jpg></image>
+      
+      <div class="img-dim"></div>
+    </div>
+    <div class="info">
+      <div class="username">zwsg </div>
+      <div class="dot"></div>
+      <div class="subtitle">曾获美国《时代周刊》2006年度风云人物！08年感动中国特别大奖！ </div>
+      <div class="link-list">
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://twitter.com" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://store.steampowered.com" title="Steam"><i class="fa-brands fa-steam"></i></a>
+        
+          <a class="link-btn" target="_blank" rel="noopener" href="https://github.com" title="GitHub"><i class="fa-brands fa-github"></i></a>
+         
+      </div>  
+    </div>
+  </div>
+</div>
+
+  
+  <div class="sticky">
+    
+      
+
+
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">分类</h3>
+      <div class="category-box">
+            <a class="category-link" href="/zwsg.github.io/categories/%E5%85%B6%E4%BB%96/">
+                其他
+                <div class="category-count">1</div>
+            </a>
+        
+            <a class="category-link" href="/zwsg.github.io/categories/%E5%89%8D%E7%AB%AF/">
+                前端
+                <div class="category-count">1</div>
+            </a>
+        </div>
+    </div>
+  </div>
+
+
+    
+      
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">归档</h3>
+      
+      
+        <a class="archive-link" href="/zwsg.github.io/archives/2023/06 ">
+          六月 2023 
+          <div class="archive-count">2 </div>
+        </a>
+      
+    </div>
+  </div>
+
+
+    
+      
+  <div class="widget-wrap">
+    <div class="widget">
+      <h3 class="widget-title">最新文章</h3>
+      <ul>
+        
+          <a class="recent-link" href="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/" title="前端奇淫技巧" >
+            <div class="recent-link-text">
+              前端奇淫技巧
+            </div>
+          </a>
+        
+          <a class="recent-link" href="/zwsg.github.io/2023/06/06/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" title="markdown基本语法" >
+            <div class="recent-link-text">
+              markdown基本语法
+            </div>
+          </a>
+        
+      </ul>
+    </div>
+  </div>
+
+    
+  </div>
+</sidebar>
+    </div>
+    <div id="content-body">
+       
+
+
+<article id="post-markdown基本语法" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  
+    
+   
+  <div class="article-inner">
+    <div class="article-main">
+      <header class="article-header">
+        
+<div class="main-title-bar">
+  <div class="main-title-dot"></div>
+  
+    
+      <h1 class="p-name article-title" itemprop="headline name">
+        markdown基本语法
+      </h1>
+    
+  
+</div>
+
+        <div class='meta-info-bar'>
+          <div class="meta-info">
+  <time class="dt-published" datetime="2023-06-06T08:09:17.000Z" itemprop="datePublished">2023-06-06</time>
+</div>
+          <div class="need-seperator meta-info">
+            <div class="meta-cate-flex">
+  
+  <a class="meta-cate-link" href="/zwsg.github.io/categories/%E5%85%B6%E4%BB%96/">其他</a>
+   
+</div>
+  
+          </div>
+          <div class="wordcount need-seperator meta-info">
+            3.4k 词 
+          </div>
+        </div>
+        
+      </header>
+      <div class="e-content article-entry" itemprop="articleBody">
+        
+          <h4 id="一、标题">一、标题</h4>
+<p>语法：<code>#</code>+<code>空格</code>+标题文字，不同个数<code>#</code>表示不同字号标题，最大为<code>1</code>号标题，最小为<code>6</code>号标题。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># 1号标题</span><br><span class="line">## 2号标题</span><br><span class="line">### 3号标题</span><br><span class="line">#### 4号标题</span><br><span class="line">##### 5号标题</span><br><span class="line">###### 6号标题</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<h1>1号标题</h1>
+<h2 id="2号标题">2号标题</h2>
+<h3 id="3号标题">3号标题</h3>
+<h4 id="4号标题">4号标题</h4>
+<h5 id="5号标题">5号标题</h5>
+<h6 id="6号标题">6号标题</h6>
+<h4 id="二、字体">二、字体</h4>
+<h5 id="1、斜体">1、斜体</h5>
+<p>语法：<code>*</code>+文字+<code>*</code> 或者 <code>_</code>+文字+<code>_</code>。</p>
+<ul>
+<li><code>*我是斜体*</code>===&gt;<em>我是斜体</em></li>
+<li><code>_我是斜体_</code>===&gt;<em>我是斜体</em></li>
+</ul>
+<h5 id="2、加粗字体">2、加粗字体</h5>
+<p>语法：<code>**</code>+文字+<code>**</code> 或者 <code>__</code>+文字+<code>__</code>。</p>
+<ul>
+<li><code>**我是加粗字体**</code>===&gt;<strong>我是加粗字体</strong></li>
+<li><code>__我是加粗字体__</code>===&gt;<strong>我是加粗字体</strong></li>
+</ul>
+<h5 id="3、斜加粗字体">3、斜加粗字体</h5>
+<p>语法：<code>***</code>+文字+<code>***</code> 或者 <code>___</code>+文字+<code>___</code>。</p>
+<ul>
+<li><code>***我是斜加粗字体***</code>===&gt;<em><strong>我是斜加粗字体</strong></em></li>
+<li><code>___我是斜加粗字体___</code>===&gt;<em><strong>我是斜加粗字体</strong></em></li>
+</ul>
+<h5 id="4、删除文本">4、删除文本</h5>
+<p>语法：<code>~~</code>+文字+<code>~~</code>。<code>~~我是删除文本~~</code>===&gt;<s>我是删除文本</s></p>
+<h4 id="三、分割线">三、分割线</h4>
+<p>语法：<code>---</code> 或者 <code>***</code> 或者 <code>___</code></p>
+<hr>
+<hr>
+<hr>
+<h4 id="四、引用">四、引用</h4>
+<p>语法：<code>&gt;</code>+文字,多个<code>&gt;</code>即为多级引用，原则上可以无限嵌套，但没有意义。</p>
+<blockquote>
+<p>我是一段引用文字</p>
+<blockquote>
+<p>我是嵌套引用</p>
+</blockquote>
+</blockquote>
+<h4 id="五、Note">五、Note</h4>
+<p>语法：<code>!!!</code></p>
+<p>!!!</p>
+<h4 id="六、列表">六、列表</h4>
+<h5 id="1、有序列表">1、有序列表</h5>
+<p>语法：<code>数字</code>+<code>.</code>+<code>空格</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 有序列表1</span><br><span class="line">2. 有序列表1</span><br><span class="line">3. 有序列表1</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<ol>
+<li>有序列表1</li>
+<li>有序列表1</li>
+<li>有序列表1</li>
+</ol>
+<h5 id="2、无序列表">2、无序列表</h5>
+<p>语法：<code>+</code> 或者 <code>-</code> 或者 <code>*</code> + <code>空格</code>。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+ 无序列表1</span><br><span class="line">* 无序列表2</span><br><span class="line">- 无序列表3</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<ul>
+<li>无序列表1</li>
+</ul>
+<ul>
+<li>无序列表2</li>
+</ul>
+<ul>
+<li>无序列表3</li>
+</ul>
+<h5 id="3、列表嵌套">3、列表嵌套</h5>
+<p>语法：上级与下级之间利用<code>3个空格</code>缩进，即可实现上下级层级关系。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">1. 我是一级列表1</span><br><span class="line">   * 我是二级列表1-1</span><br><span class="line">      + 我是二级列表1-1-1</span><br><span class="line">   * 我是二级列表1-2</span><br><span class="line">   * 我是二级列表1-3</span><br><span class="line">2. 我是一级列表2</span><br><span class="line">   1. 我是二级列表2-1</span><br><span class="line">3. 我是一级列表3</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<ol>
+<li>我是一级列表1
+<ul>
+<li>我是二级列表1-1
+<ul>
+<li>我是二级列表1-1-1</li>
+</ul>
+</li>
+<li>我是二级列表1-2</li>
+<li>我是二级列表1-3</li>
+</ul>
+</li>
+<li>我是一级列表2
+<ol>
+<li>我是二级列表2-1</li>
+</ol>
+</li>
+<li>我是一级列表3</li>
+</ol>
+<h4 id="七、多选框">七、多选框</h4>
+<p>语法：</p>
+<ul>
+<li>未选中：<code>-</code>+<code>空格</code>+<code>[]</code>+<code>空格</code>，注：<code>[]</code>内也需键入一个空格。</li>
+<li>选中：<code>-</code>+<code>空格</code>+<code>[x]</code>+<code>空格</code>，注：<code>[]</code>内不能有空格。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- [ ] 未选中</span><br><span class="line">- [x] 选中</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<ul>
+<li>[ ] 未选中</li>
+<li>[x] 选中</li>
+</ul>
+<h4 id="八、表格">八、表格</h4>
+<p>语法：</p>
+<ul>
+<li>第一行为表头，第二行分割表头和内容。</li>
+<li><code>:</code>表示文字对齐方式，左侧有<code>:</code>表示左对齐，右侧有<code>:</code>表示右对齐，两侧都有<code>:</code>表示居中对齐。</li>
+<li>第二行<code>-</code>最少有一个，原则上可以无限多。</li>
+</ul>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">|姓名|技能|排行|</span><br><span class="line">|--|:--:|--|</span><br><span class="line">|刘备|哭|大哥|</span><br><span class="line">|关羽|打|二哥|</span><br><span class="line">|张飞|骂|三弟|</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<table>
+<thead>
+<tr>
+<th>姓名</th>
+<th style="text-align:center">技能</th>
+<th>排行</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>刘备</td>
+<td style="text-align:center">哭</td>
+<td>大哥</td>
+</tr>
+<tr>
+<td>关羽</td>
+<td style="text-align:center">打</td>
+<td>二哥</td>
+</tr>
+<tr>
+<td>张飞</td>
+<td style="text-align:center">骂</td>
+<td>三弟</td>
+</tr>
+</tbody>
+</table>
+<h4 id="九、图片">九、图片</h4>
+<p>语法：<code>![占位文字](图片链接 &quot;图片标题&quot;)</code></p>
+<ul>
+<li>占位文字即图片加载失败时界面上显示的文字，可不填。</li>
+<li>图片标题即鼠标悬浮在图片上时提示的文字，可不填。</li>
+</ul>
+<p><code>![为爱见证](http://imgs.bootstrapmb.com/2019/12/161045478.png &quot;我是为爱见证&quot;)</code></p>
+<p>效果如下：</p>
+<p><img src="/zwsg.github.io/2023/06/06/markdown%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/161045478.png" alt="为爱见证" title="我是为爱见证"></p>
+<h4 id="十、超链接">十、超链接</h4>
+<p>语法：超链接与图片极为相似，<code>[占位文字](链接地址 &quot;链接提示&quot;)</code>，也可以直接用<code>&lt;&gt;</code>括起来，<code>&lt;链接地址&gt;</code>。</p>
+<ul>
+<li>占位文字即在页面上展示的文字，也可以是图片及其他内容。</li>
+<li>链接提示即鼠标悬浮在链接上时提示的文字，可不填。</li>
+</ul>
+<p>效果如下：</p>
+<p><a target="_blank" rel="noopener" href="https://www.baidu.com" title="点我跳转">我是超链接</a><br>
+<a target="_blank" rel="noopener" href="https://www.baidu.com">https://www.baidu.com</a></p>
+<h4 id="十一、键盘样式">十一、键盘样式</h4>
+<p>语法：利用<code>&lt;kbd&gt;&lt;/kbd&gt;</code>标签包裹文字。</p>
+<p>效果如下：</p>
+<p><kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>Delete</kbd></p>
+<h4 id="十二、脚注">十二、脚注</h4>
+<p>语法：文字+<code>[^脚注名]</code>，然后定义脚注：<code>[^脚注名]: 脚注说明</code>。</p>
+<p>效果如下：</p>
+<p>点我查看脚注1 <a href="%E6%88%91%E5%B0%B1%E6%98%AF%E8%84%9A%E6%B3%A81%E5%95%8A%EF%BC%81%EF%BC%81%EF%BC%81">^脚注1</a>。</p>
+<p>点我查看脚注1 <a href="%E6%88%91%E5%B0%B1%E6%98%AF%E8%84%9A%E6%B3%A82%E5%95%8A%EF%BC%81%EF%BC%81%EF%BC%81">^脚注2</a>。</p>
+<h4 id="十三、代码块">十三、代码块</h4>
+<p>语法：利用```包裹代码块，并可指定代码语言，从而根据不同语言高亮显示代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">(```)js</span><br><span class="line">  function fun()&#123;</span><br><span class="line">    console.log(&quot;这是一句非常牛逼的代码&quot;);</span><br><span class="line">  &#125;</span><br><span class="line">  fun();</span><br><span class="line">(```)</span><br><span class="line"></span><br><span class="line">注：上面(```)中小括号是无需要的，这里为了防止markdown转义，才添加了()!</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">fun</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;这是一句非常牛逼的代码&quot;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">fun</span>();</span><br></pre></td></tr></table></figure>
+<h4 id="十四、流程图">十四、流程图</h4>
+<p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">(```)flow</span><br><span class="line">  st=&gt;start: 开始</span><br><span class="line">  op=&gt;operation: My Operation</span><br><span class="line">  op1=&gt;operation: My Operation1</span><br><span class="line">  cond=&gt;condition: Yes or No?</span><br><span class="line">  e=&gt;end</span><br><span class="line">  st-&gt;op-&gt;op1-&gt;cond</span><br><span class="line">  cond(yes)-&gt;e</span><br><span class="line">  cond(no)-&gt;op</span><br><span class="line">(```)</span><br><span class="line"></span><br><span class="line">注：上面(```)中小括号是无需要的，这里为了防止markdown转义，才添加了()!</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<center>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">op=&gt;operation: My Operation</span><br><span class="line">op1=&gt;operation: My Operation1</span><br><span class="line">cond=&gt;condition: Yes or No?</span><br><span class="line">e=&gt;end</span><br><span class="line">st-&gt;op-&gt;op1-&gt;cond</span><br><span class="line">cond(yes)-&gt;e</span><br><span class="line">cond(no)-&gt;op</span><br></pre></td></tr></table></figure>
+</center>
+<h4 id="十五、sequence图">十五、sequence图</h4>
+<p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">(```)sequence</span><br><span class="line">对象A-&gt;对象B: 对象B你好吗?（请求）</span><br><span class="line">Note right of 对象B: 对象B的描述</span><br><span class="line">Note left of 对象A: 对象A的描述(提示)</span><br><span class="line">对象B--&gt;对象A: 我很好(响应)</span><br><span class="line">对象A-&gt;对象B: 你真的好吗？</span><br><span class="line">(```)</span><br><span class="line"></span><br><span class="line">注：上面(```)中小括号是无需要的，这里为了防止markdown转义，才添加了()!</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<center>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">对象A-&gt;对象B: 对象B你好吗?（请求）</span><br><span class="line">Note right of 对象B: 对象B的描述</span><br><span class="line">Note left of 对象A: 对象A的描述(提示)</span><br><span class="line">对象B--&gt;对象A: 我很好(响应)</span><br><span class="line">对象A-&gt;对象B: 你真的好吗？</span><br></pre></td></tr></table></figure>
+</center>
+<h4 id="十六、甘特图">十六、甘特图</h4>
+<p>语法：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">(```)mermaid</span><br><span class="line">      gantt</span><br><span class="line">      dateFormat  YYYY-MM-DD</span><br><span class="line">      title 软件开发甘特图</span><br><span class="line">      section 设计</span><br><span class="line">      需求                      :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">      原型                      :active,  des2, 2014-01-09, 3d</span><br><span class="line">      UI设计                     :         des3, after des2, 5d</span><br><span class="line">  未来任务                     :         des4, after des3, 5d</span><br><span class="line">      section 开发</span><br><span class="line">      学习准备理解需求                      :crit, done, 2014-01-06,24h</span><br><span class="line">      设计框架                             :crit, done, after des2, 2d</span><br><span class="line">      开发                                 :crit, active, 3d</span><br><span class="line">      未来任务                              :crit, 5d</span><br><span class="line">      耍                                   :2d</span><br><span class="line">      section 测试</span><br><span class="line">      功能测试                              :active, a1, after des3, 3d</span><br><span class="line">      压力测试                               :after a1  , 20h</span><br><span class="line">      测试报告                               : 48h</span><br><span class="line">(```)</span><br><span class="line"></span><br><span class="line">注：上面(```)中小括号是无需要的，这里为了防止markdown转义，才添加了()!</span><br></pre></td></tr></table></figure>
+<p>效果如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">    gantt</span><br><span class="line">    dateFormat  YYYY-MM-DD</span><br><span class="line">    title 软件开发甘特图</span><br><span class="line">    section 设计</span><br><span class="line">    需求                      :done,    des1, 2014-01-06,2014-01-08</span><br><span class="line">    原型                      :active,  des2, 2014-01-09, 3d</span><br><span class="line">    UI设计                     :         des3, after des2, 5d</span><br><span class="line">未来任务                     :         des4, after des3, 5d</span><br><span class="line">    section 开发</span><br><span class="line">    学习准备理解需求                      :crit, done, 2014-01-06,24h</span><br><span class="line">    设计框架                             :crit, done, after des2, 2d</span><br><span class="line">    开发                                 :crit, active, 3d</span><br><span class="line">    未来任务                              :crit, 5d</span><br><span class="line">    耍                                   :2d</span><br><span class="line">    section 测试</span><br><span class="line">    功能测试                              :active, a1, after des3, 3d</span><br><span class="line">    压力测试                               :after a1  , 20h</span><br><span class="line">    测试报告                               : 48h</span><br></pre></td></tr></table></figure>
+<h4 id="十七、html标签">十七、html标签</h4>
+<p>语法：markdown支持html标签及样式设置，如：<code>&lt;div style=&quot;color:red&quot;&gt;我是html标签&lt;/div&gt;</code></p>
+<p>效果如下：</p>
+<div style="color:red">我是html标签</div>
+<p>图表配置页面<br>
+<a target="_blank" rel="noopener" href="https://www.voidking.com/dev-markdown-mermaid-start/">https://www.voidking.com/dev-markdown-mermaid-start/</a></p>
+
+        
+      </div>
+
+         
+    </div>
+    
+     
+  </div>
+  
+    
+<nav id="article-nav">
+  <a class="article-nav-btn left "
+    
+      href="/zwsg.github.io/2023/06/08/%E5%89%8D%E7%AB%AF%E5%A5%87%E6%B7%AB%E6%8A%80%E5%B7%A7/"
+      title="前端奇淫技巧"
+     >
+    <i class="fa-solid fa-angle-left"></i>
+    <p class="title-text">
+      
+        前端奇淫技巧
+        
+    </p>
+  </a>
+  <a class="article-nav-btn right  disabled "
+     >
+
+    <p class="title-text">
+        
+    </p>
+    <i class="fa-solid fa-angle-right"></i>
+  </a>
+</nav>
+
+
+  
+</article>
+
+
+
+
+
+
+    </div>
+    <div id="footer-wrapper">
+      <footer id="footer">
+  
+  <div id="footer-info" class="inner">
+    
+    &copy; 2025 zwsg                   
+<br>
+    他强由他强，清风拂山冈。他横任他横，明月照大江。
+    <!-- Powered by <a href="https://hexo.io/" target="_blank">Hexo</a> & Theme <a target="_blank" rel="noopener" href="https://github.com/saicaca/hexo-theme-vivia">Vivia</a> -->
+  </div>
+</footer>
+
+    </div>
+    <div class="back-to-top-wrapper">
+    <button id="back-to-top-btn" class="back-to-top-btn hide" onclick="topFunction()">
+        <i class="fa-solid fa-angle-up"></i>
+    </button>
+</div>
+
+<script>
+    function topFunction() {
+        window.scroll({ top: 0, behavior: 'smooth' });
+    }
+    let btn = document.getElementById('back-to-top-btn');
+    function scrollFunction() {
+        if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+            btn.classList.remove('hide')
+        } else {
+            btn.classList.add('hide')
+        }
+    }
+    window.onscroll = function() {
+        scrollFunction();
+    }
+</script>
+
+  </div>
+  <script src="/zwsg.github.io/js/light-dark-switch.js"></script>
+</body>
+</html>
